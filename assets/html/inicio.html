@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Nexus Battles III - Inicio de Sesión</title>
+    <link rel="icon" type="image/x-icon" href="../css/images/icono.png">
+    <link rel="stylesheet" href="../css/inicio.css">
+</head>
+<body>
+    <div class="inicio">
+        <div class="cont1">
+            <img id="flecha" src="../css/images/atras.png"></img>
+            <label id="atras">Atrás</label>
+        </div>
+        <div class="cont2">
+            <h1 id="title" >Welcome back!</h1>
+            <div class="cont">
+                <div class="mini-cont">
+                    <label class="form-label">Username</label>
+                    <div class="mini-mini-cont">
+                        <input type="text" id="username" class="form-input"></input>
+                        <span id="username-valid-icon" class="validity-icon empty"></span>
+                    </div>
+                </div>
+                <div class="mini-cont">
+                    <label class="form-label">Password</label>
+                    <div class="mini-mini-cont">
+                        <input type="password" id="password" class="form-input"></input>
+                        <span class="toggle-password">
+                            <img src="../css/images/openeye_white.png" id="toggle-icon">
+                        </span>
+                        <span id="password-valid-icon" class="validity-icon empty"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <a id="forgot">I forgot my password :C</a>
+            <button id="next" class="boton">Next</button>
+        </div>
+        </div>
+    </div>
+    <script type="module" src="/src/view/inicioView.js"></script> 
+</body>
+</html>
