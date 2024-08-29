@@ -1,5 +1,5 @@
 //const handleLogin = require("./pruebas");
-import { checkEmpty, handleLogin, toogleIcon, validatePassword, validateUsername } from "./inicioController.js";
+import { checkEmpty, handleLogin, toogleIcon, validatePassword, validateUsername } from "../controller/inicioController.js";
 //const toogleIcon = require("./pruebas");
 
 document.getElementById('toggle-icon').addEventListener('click', function() {
