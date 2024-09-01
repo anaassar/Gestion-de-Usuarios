@@ -1,3 +1,15 @@
+//import { validatePassword } from "./inicioController";
+
+/*module.exports = {
+    checkPasswords,
+    verifyPassword,
+    validateEmail,
+    empty,
+    handleRegister,
+    toogleIcon,
+    validateName,
+    checkUsername
+};*/
 
 export function toogleIcon(password) {
     if (password.type === 'password') {
@@ -7,6 +19,7 @@ export function toogleIcon(password) {
     }
 }
 
+
 export function empty(data) {
     if (data.value==='') {
         return true;
@@ -14,6 +27,8 @@ export function empty(data) {
         return false;
     }
 }
+
+
 
 export function verifyPassword(password) {
     // Expresiones regulares para verificar los requisitos
@@ -23,10 +38,10 @@ export function verifyPassword(password) {
     const hasUpperCase = /[A-Z]/; // Al menos una letra mayúscula
 
     if (
-        minLength.test(password.value) &&
-        hasNumber.test(password.value) &&
-        hasSpecialChar.test(password.value) &&
-        hasUpperCase.test(password.value)
+        minLength.test(password) &&
+        hasNumber.test(password) &&
+        hasSpecialChar.test(password) &&
+        hasUpperCase.test(password)
     ) {
         return true;
     }else{
@@ -34,28 +49,33 @@ export function verifyPassword(password) {
     }
 }
 
+
+
 export function checkPasswords(password, password2) {
-    if (password.value === password2.value) {
+    return password===password2;
+    if (password === password2) {
         return true;
     } else {
         return false;
     }
 }
 
+
+
 export function validateName(name) {
     const namePattern = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/; // Permite letras y espacios
-
-    if (namePattern.test(name.value)) {
+    return namePattern.test(name);
+    /*if (namePattern.test(name.value)) {
         return true;
     } else {
         return false;
-    }
+    }*/
 }
 
 export function validateEmail(mail) {
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Patrón básico para email
 
-    if (emailPattern.test(mail.value)) {
+    if (emailPattern.test(mail)) {
         return true;
     } else {
         return false;
@@ -72,7 +92,7 @@ const blacklist = [
 
 
 export function checkUsername(username) {
-    const usernameValue = username.value.toLowerCase(); // Convierte a minúsculas para comparar
+    const usernameValue = username.toLowerCase(); // Convierte a minúsculas para comparar
     const isInvalid = blacklist.some(word => usernameValue.includes(word));
     
     // Si encuentra alguna palabra prohibida, isInvalid será true, de lo contrario será false.

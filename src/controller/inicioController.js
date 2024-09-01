@@ -1,5 +1,14 @@
+/*module.exports = {
+    validateUsername,
+    validatePassword,
+    checkEmpty,
+    handleLogin,
+    toogleIcon
+};*/
 
-export function handleLogin(username, password) {
+
+
+ export function handleLogin(username, password) {
 
     console.log('Username:', username);
     console.log('Password:', password);
@@ -15,7 +24,7 @@ export function toogleIcon(password) {
 }
 
 export function validateUsername(username) {
-    if (username.value === '') {
+    if (username=== '') {
         return false;
     } else {
         return true;
@@ -23,7 +32,7 @@ export function validateUsername(username) {
 }
 
 export function validatePassword(password) {
-    if (password.value === '') {
+    if (password === '') {
         return false;
     } else {
         return true;

@@ -20,7 +20,7 @@ document.getElementById('username').addEventListener('input', function() {
     const usernameField = document.getElementById('username');
     const validIcon = document.getElementById('username-valid-icon');
 
-    if (!validateUsername(usernameField)) {
+    if (!validateUsername(usernameField.value)) {
         validIcon.classList.remove('valid');
         validIcon.classList.add('empty');
         validIcon.style.display = 'inline-block';
@@ -39,7 +39,7 @@ document.getElementById('password').addEventListener('input', function() {
     const validIcon = document.getElementById('password-valid-icon');
 
     
-    if (!validatePassword(passwordField)) {
+    if (!validatePassword(passwordField.value)) {
         validIcon.classList.remove('valid');
         validIcon.classList.add('empty');
         validIcon.style.display = 'inline-block';

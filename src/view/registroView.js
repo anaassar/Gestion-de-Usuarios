@@ -26,7 +26,7 @@ document.getElementById('password').addEventListener('input', function validateP
         validIcon.style.display = 'inline-block';
         validIcon.removeAttribute('title'); // Remueve el tooltip cuando está vacío
     } else if (
-        verifyPassword(passwordField)
+        verifyPassword(passwordField.value)
     ) {
         validIcon.classList.remove('invalid', 'empty');
         validIcon.classList.add('valid');
@@ -52,7 +52,7 @@ document.getElementById('password2').addEventListener('input', function() {
         validIcon.classList.add('empty');
         validIcon.style.display = 'inline-block';
         validIcon.removeAttribute('title'); // Remueve el tooltip cuando está vacío
-    } else if (checkPasswords(passwordField,confirmPasswordField)) {
+    } else if (checkPasswords(passwordField.value,confirmPasswordField.value)) {
         validIcon.classList.remove('invalid', 'empty');
         validIcon.classList.add('valid');
         validIcon.style.display = 'inline-block';
@@ -77,7 +77,7 @@ document.getElementById('name').addEventListener('input', function() {
         validIcon.classList.add('empty');
         validIcon.style.display = 'inline-block';
         validIcon.removeAttribute('title');
-    } else if (validateName(nameField)) {
+    } else if (validateName(nameField.value)) {
         validIcon.classList.remove('invalid', 'empty');
         validIcon.classList.add('valid');
         validIcon.style.display = 'inline-block';
@@ -100,7 +100,7 @@ document.getElementById('lastname').addEventListener('input', function() {
         validIcon.classList.add('empty');
         validIcon.style.display = 'inline-block';
         validIcon.removeAttribute('title');
-    } else if (validateName(lastnameField)) {
+    } else if (validateName(lastnameField.value)) {
         validIcon.classList.remove('invalid', 'empty');
         validIcon.classList.add('valid');
         validIcon.style.display = 'inline-block';
@@ -122,7 +122,7 @@ document.getElementById('email').addEventListener('input', function() {
         validIcon.classList.add('empty');
         validIcon.style.display = 'inline-block';
         validIcon.removeAttribute('title');
-    } else if (validateEmail(emailField)) {
+    } else if (validateEmail(emailField.value)) {
         validIcon.classList.remove('invalid', 'empty');
         validIcon.classList.add('valid');
         validIcon.style.display = 'inline-block';
@@ -152,7 +152,7 @@ document.getElementById('username').addEventListener('input', function() {
         validIcon.style.display = 'inline-block';
         validIcon.removeAttribute('title');
     } else {
-        if (checkUsername(usernameField)) {
+        if (checkUsername(usernameField.value)) {
             validIcon.classList.remove('invalid', 'empty');
             validIcon.classList.add('valid');
             validIcon.style.display = 'inline-block';
