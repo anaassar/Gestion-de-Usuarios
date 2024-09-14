@@ -8,8 +8,7 @@
 
 
 
- export function handleLogin(username, password) {
-
+export function handleLogin(username, password) {
     console.log('Username:', username);
     console.log('Password:', password);
     return true;
@@ -45,4 +44,17 @@ export function checkEmpty(emptyIcons) {
     } else {
         return false;
     }
+}
+
+
+//  ︵‿︵‿୨♡୧ PAGINA DOS (2FA) ୨♡୧‿︵‿︵
+
+export function handle2fa(code) {
+    //window.location.href = 'inicio.html';
+    console.log('Code:', code);
+    return true;
+}
+
+export function validateCode(code) {
+    return code==='';
 }

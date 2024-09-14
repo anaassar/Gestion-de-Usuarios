@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="../css/inicio.css">
 </head>
 <body>
-    <div class="inicio">
+    <div class="inicio" id="page1">
         <div class="cont1">
             <img id="flecha" src="../css/images/atras.png"></img>
             <label id="atras">Atrás</label>
         </div>
         <div class="cont2">
-            <h1 id="title" >Welcome back!</h1>
+            <h1 id="title" >Bienvenido de vuelta!</h1>
             <div class="cont">
                 <div class="mini-cont">
                     <label class="form-label">Username</label>
@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <div class="mini-cont">
-                    <label class="form-label">Password</label>
+                    <label class="form-label">Contraseña</label>
                     <div class="mini-mini-cont">
                         <input type="password" id="password" class="form-input"></input>
                         <span class="toggle-password">
@@ -35,9 +35,31 @@
                 </div>
             </div>
             
-            <a id="forgot">I forgot my password :C</a>
-            <button id="next" class="boton">Next</button>
+            <a class="link" id="forgot">Olvidé mi contraseña :C</a>
+            <button id="next" class="boton">Siguiente</button>
         </div>
+        </div>
+        <div class="inicio" id="page2">
+            <div class="cont1" id="contAtras">
+                <img id="flecha" src="../css/images/atras.png"></img>
+                <label id="atras">Atrás</label>
+            </div>
+            <div class="cont2">
+                <h1 id="title" >Ya casi terminamos...</h1>
+                <div class="cont">
+                    <div class="mini-cont">
+                        <label class="form-label">Por favor, ingresa el código que te enviamos a:</label>
+                        <div class="mini-mini-cont">
+                            <input type="text" id="code" class="form-input"></input>
+                            <span id="code-valid-icon" class="validity-icon empty"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <a class="link" id="nocode">No recibí ningún código :C</a>
+                <button id="play" class="boton">A jugar!</button>
+            </div>
+            </div>
         </div>
     </div>
     <script type="module" src="/src/view/inicioView.js"></script> 

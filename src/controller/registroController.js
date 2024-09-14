@@ -49,27 +49,13 @@ export function verifyPassword(password) {
     }
 }
 
-
-
 export function checkPasswords(password, password2) {
     return password===password2;
-    if (password === password2) {
-        return true;
-    } else {
-        return false;
-    }
 }
-
-
 
 export function validateName(name) {
     const namePattern = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/; // Permite letras y espacios
     return namePattern.test(name);
-    /*if (namePattern.test(name.value)) {
-        return true;
-    } else {
-        return false;
-    }*/
 }
 
 export function validateEmail(mail) {
@@ -128,10 +114,3 @@ export function handleRegister(p1,r1,p2,r2,p3,r3,p4,r4) {
     console.log(preguntas);
 }
 
-/*export function data(userInfo,preguntas) {
-    const user ={
-        userInfo: userInfo,
-        preguntas: preguntas
-    }
-    console.log(user);
-}*/
